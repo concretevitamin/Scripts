@@ -1,5 +1,7 @@
 """
 Extracts urls in a given page that end with certain extentions.
+
+Usage: fetch_links.py page_link extentions_list
 """
 
 # Jul 18, 2012
