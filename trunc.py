@@ -26,14 +26,14 @@ def main():
         print 'No matched files for prefix "%s".' % prefix_to_trunc
         sys.exit()
 
-    print "Matched files:"
+    print "Matched files:\n"
     for file_name in sum(matched_files.values(), []):
-        print "*** " + file_name
-    print "\nTruncating...\n",
+        print "\t" + file_name
+    print "\nTruncating...",
 
     # truncate, print success message
     for directory in matched_files:
-	for file in matched_files[directory]:
+	for file_name in matched_files[directory]:
 	    os.rename(os.path.join(directory, file_name), os.path.join(directory, file_name.replace(prefix_to_trunc, '', 1)))
 
     print "Done."
