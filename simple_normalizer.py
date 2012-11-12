@@ -1,3 +1,7 @@
+"""Usage: python simple_normalize
+The script reads multiple lines from stdin, treating each line as a path to
+normalize.
+"""
 import sys
 
 def simple_normalize(paths):
